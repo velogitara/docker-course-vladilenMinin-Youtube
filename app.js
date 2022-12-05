@@ -10,6 +10,7 @@ app.set('views', path.resolve(__dirname, 'pages'))
 app.use(express.static('public'))
 app.use(express.urlencoded({ extended: true }))
 
+// Значения, заданные в ENV в Dockerfile идут сюда через process.env
 const port = process.env.PORT ?? 3000
 const logsPath = path.resolve(__dirname, 'data', 'logs.txt')
 
@@ -24,5 +25,7 @@ app.post('/', async (req, res) => {
   await fs.appendFile(logsPath, `${text}\r\n`)
   res.redirect('/')
 })
+
+console.log('Hello from Express !!!')
 
 app.listen(port, () => console.log(`Server listening on port ${port}`))
