@@ -3,10 +3,10 @@
 
 # make build
 build:
-	docker build -t logsapp .
+	docker build -t velogitara/logsapp .
 # make run
 run:
-	docker run -d -p 3000:3000 --rm --name logsapp logsapp
+	docker run -d -p 3000:3000 --rm --name logsapp velogitara/logsapp
 # make stop
 stop:
 	docker stop logsapp

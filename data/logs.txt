@@ -1,2 +1,0 @@
-predefined log 1
-predefined log 2

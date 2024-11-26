@@ -19,8 +19,8 @@ RUN yarn install
 COPY . .
 
 # Задаём Environment переменную
-# В коде мы к ней емеем доступ через process.env.PORT
-ENV PORT 3000
+# В коде мы к ней имеем доступ через process.env.PORT
+ENV PORT=3000
 
 # Сообщаем докеру, какой порт мы используем
 # $PORT - обращение к ENV переменной PORT
